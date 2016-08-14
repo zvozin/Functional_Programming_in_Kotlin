@@ -10,6 +10,7 @@ import me.alexz.ch4_Handling_Errors_Without_Exceptions.Option.Some
  * Created by azuzin37 on 8/14/16. Yes, indeed.
  */
 
-fun <A> List<Option<A>>.sequence(): Option<List<A>> = foldLeft(Some(Nil)) { oa, l: Option<List<A>> ->
+fun <A> List<Option<A>>.sequence(): Option<List<A>> = foldLeft(Some(Nil)) {
+    oa, l: Option<List<A>> ->
     l.flatMap { l -> oa.map { Cons(it, l) } }
 }

@@ -27,7 +27,7 @@ sealed class List<out A> {
 
 fun <A> list(vararg aas: A): List<A> = aas.asList().foldRight(List.Nil) { a, r: List<A> -> List.Cons(a, r) }
 
-fun List<Double>.sum(): Double = foldLeft(0.0){el, d -> d + el}
+fun List<Double>.sum(): Double = foldLeft(0.0) { el, d -> d + el }
 
 /**
  * The tree ADT

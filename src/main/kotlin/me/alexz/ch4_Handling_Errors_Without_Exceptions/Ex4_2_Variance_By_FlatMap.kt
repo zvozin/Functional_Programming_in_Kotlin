@@ -8,6 +8,6 @@ import me.alexz.ch3_Functional_Data_Structures.map
  */
 
 fun List<Double>.variance(): Option<Double> =
-        mean().flatMap{ m -> map{ t -> Math.pow(t - m, 2.0)}.mean()}
+        mean().flatMap { m -> map { t -> Math.pow(t - m, 2.0) }.mean() }
 
 

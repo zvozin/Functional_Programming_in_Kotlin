@@ -11,7 +11,7 @@ import me.alexz.ch4_Handling_Errors_Without_Exceptions.Either.Right
 
 fun <A, B, C> List<B>.traverseEither(f: (B) -> Either<A, C>): Either<A, List<C>> = this.foldRight(Right(Nil)) {
     b, e: Either<A, List<C>> ->
-    e.flatMap{lc -> f(b).map{ Cons(it, lc) }}
+    e.flatMap { lc -> f(b).map { Cons(it, lc) } }
 }
 
 fun <A, B, C> List<B>.sequenceEither(): Either<A, List<B>> =

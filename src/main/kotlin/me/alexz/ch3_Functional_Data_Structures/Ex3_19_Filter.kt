@@ -15,4 +15,4 @@ fun <A> List<A>.filter(f: (A) -> Boolean): List<A> = when (this) {
     is Nil -> Nil
 }
 
-fun List<Int>.removeOdds(): List<Int> = this.filter{ it % 2 == 1}
+fun List<Int>.removeOdds(): List<Int> = this.filter { it % 2 == 1 }

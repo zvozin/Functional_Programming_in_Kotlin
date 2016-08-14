@@ -19,21 +19,25 @@ sealed class Option<out A> {
     class Some<A>(val value: A) : Option<A>()
 }
 
-fun <A, B> lift(f: (A) -> B): (Option<A>) -> Option<B> = { it.map(f)}
+fun <A, B> lift(f: (A) -> B): (Option<A>) -> Option<B> = { it.map(f) }
 
-fun <A> _try(f: Lazy<A>): Option<A> = try{Some(f.value)}catch(e: Exception){None}
+fun <A> _try(f: Lazy<A>): Option<A> = try {
+    Some(f.value)
+} catch(e: Exception) {
+    None
+}
 
-fun List<Double>.mean(): Option<Double> = when(this){
+fun List<Double>.mean(): Option<Double> = when (this) {
     is Nil -> None
-    is Cons -> Some(sum()/size())
+    is Cons -> Some(sum() / size())
 }
 
 /**
  * The Either ADT
  */
-sealed class Either<out A, out B>{
-    class Left<A>(val value: A): Either<A, Nothing>()
-    class Right<B>(val value: B): Either<Nothing, B>()
+sealed class Either<out A, out B> {
+    class Left<A>(val value: A) : Either<A, Nothing>()
+    class Right<B>(val value: B) : Either<Nothing, B>()
 }
 
 
