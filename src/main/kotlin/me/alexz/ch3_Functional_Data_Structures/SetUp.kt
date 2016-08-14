@@ -7,7 +7,7 @@ package me.alexz.ch3_Functional_Data_Structures
 /**
  * The list ADT
  */
-sealed class List<out A>{
+sealed class List<out A> {
 
     object Nil : List<Nothing>()
     class Cons<out A>(val head: A, val tail: List<A>) : List<A>()
@@ -17,18 +17,22 @@ sealed class List<out A>{
         else -> seed
     }
 
-    fun <B> equals(other: List<B>): Boolean = when(this){
+    fun <B> equals(other: List<B>): Boolean = when (this) {
         is Cons -> (other as Cons).head!!.equals(head) && other.tail.equals(tail)
         else -> true
     }
+
+    fun size(): Int = foldLeft(0) { el, i -> i + 1 }
 }
 
-fun <A> list(vararg aas: A): List<A> = aas.asList().foldRight(List.Nil){ a, r: List<A> -> List.Cons(a, r)}
+fun <A> list(vararg aas: A): List<A> = aas.asList().foldRight(List.Nil) { a, r: List<A> -> List.Cons(a, r) }
+
+fun List<Double>.sum(): Double = foldLeft(0.0){el, d -> d + el}
 
 /**
  * The tree ADT
  */
-sealed class Tree<out A>{
-    class Leaf<out A>(val value: A): Tree<A>()
-    class Branch<out A>(val left: Tree<A>, val right: Tree<A>): Tree<A>()
+sealed class Tree<out A> {
+    class Leaf<out A>(val value: A) : Tree<A>()
+    class Branch<out A>(val left: Tree<A>, val right: Tree<A>) : Tree<A>()
 }
