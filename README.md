@@ -42,7 +42,7 @@ Kotlin differs from Scala three ways: some things are missing, others are differ
 #### Missing in Scala
 - first-class [extension functions](https://kotlinlang.org/docs/reference/extensions.html) without having to resort to `implicit` type conversion, which both:
     - allow fully type-safe extension (not type classes, though - you can't yet implement an interface like this)
-    - bypass the [Tyranny of Dominant Decomposition](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.9.5189&rep=rep1&type=pdf), which the authors mention discussing `sequence`-ing of a `List` of `Option`s. 
+    - obviate the [tyranny of dominant decomposition](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.9.5189&rep=rep1&type=pdf), which the authors mention discussing `sequence`-ing of a `List` of `Option`s. 
   
 Virtualy *everything* in these koans is implemented using extension functions.
 
