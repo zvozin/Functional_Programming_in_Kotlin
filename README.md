@@ -38,7 +38,7 @@ Kotlin differs from Scala three ways: some things are missing, others are differ
 ### Different between Kotlin and Scala
 
 - `when` is not a Scala pattern-match. You can't implement `unapply()` for a type, and there are no variable assignments. It does its own neat tricks, though: automatically casts the match subject when matching on class, and doesn't require explicit source reference on the right side of such matches
-- only one lambda argument can be anonymous, and is referred to as `it` rather than `_`
+- only one lambda argument can be anonymous, and is referred to as `it` rather than `_`. In exchange, the `it` reference can be used in a lambda any number of times without confusion
 - generic syntax is Java/C#-style
 
 ### Missing in Scala
