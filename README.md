@@ -10,8 +10,8 @@ Kotlin is the new heir apparent to Java, developed open-source style by [Jetbrai
 - collections with syntactic sugars
 - operator overloading w/infix syntax
 - a [first-class extension facility](https://kotlinlang.org/docs/reference/extensions.html)
-- [sealed classes](https://kotlinlang.org/docs/reference/classes.html to express ADTs
-- *when* statement that's half way between a switch and a pattern-match
+- [sealed classes](https://kotlinlang.org/docs/reference/classes.html) to express ADTs
+- `when` statement that's half way between a switch and a pattern-match
 - language-level null-safety (as in Swift)
 - quick compiles
 - extensive tool support (because provenance)
@@ -22,7 +22,28 @@ Kotlin's been gaining steam among Android developers and Scala refugees. Take it
 
 You will then be ready to tackle these.
 
-## Notes
+## What you're getting into
 
-- The Kotlin versions of the exercises typically define extension functions where the Scala originals use standalones. This is my personal preference of what I felt to be more idiomatic for a rightward-growing, OO-heritaged language
-- Consider *NOT* using what you implement here in production code
+NOTE: The book builds functional programming concepts from first principles to monads, applicatives and pure stream I/O in 15 chapters, with 10-20 coding exercices each. That's easily *a couple of weeks* worth of week-night reading and coding. Take the chapters in order, and pace yourself.
+
+## Pertinent differences between Scala and Kotlin
+
+Kotlin differs from Scala three ways: some things are missing, others are different, others are in Kotlin but no in Scala.
+
+### Missing in Kotlin
+
+- `for` comprehension. There's none. Spelling out all the `flatMap`s has the obvious up- and down-sides
+- there's no `a: => A`-style syntactic sugar for non-strict arguments. You have to explicitly use `Lazy<A>`
+
+### Different between Kotlin and Scala
+
+- `when` is not a Scala pattern-match. You can't implement `unapply()` for a type, and there are no variable assignments. It does its own neat tricks, though: automatically casts the match subject when matching on class, and doesn't require explicit source reference on the right side of such matches
+- only one lambda argument can be anonymous, and is referred to as `it` rather than `_`
+- generic syntax is Java/C#-style
+
+### Missing in Scala
+- first-class [extension functions](https://kotlinlang.org/docs/reference/extensions.html) without having to resort to `implicit` type conversion, which both:
+    - allow fully type-safe extension (although not type classes, as you can't yet implement an interface in this manner), and 
+    - bypass the [Tyranny of Dominant Decomposition](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.9.5189&rep=rep1&type=pdf), which the authors mention in passing when discussing `sequence` of a `List` of `Option`s. 
+  
+Virtualy *everything* in these koans is implemented using extension functions.
