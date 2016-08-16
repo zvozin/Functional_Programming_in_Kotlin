@@ -41,14 +41,16 @@ Kotlin differs from Scala three ways: some things are missing, others are differ
 
 #### Missing in Scala
 - first-class [extension functions](https://kotlinlang.org/docs/reference/extensions.html) without having to resort to `implicit` type conversion, which both:
-    - allow fully type-safe extension (although not type classes, as you can't yet implement an interface in this manner), and 
+    - allow fully type-safe extension (although not type classes, as you can't yet implement an interface in this manner)
     - bypass the [Tyranny of Dominant Decomposition](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.9.5189&rep=rep1&type=pdf), which the authors mention in passing when discussing `sequence` of a `List` of `Option`s. 
   
 Virtualy *everything* in these koans is implemented using extension functions.
 
 # Thanks
 
-These koans constitute a thank you to Paul Chiusano and Rúnar Bjarnason for putting together what's widely considered a seminal book on functional programming, as well as a thank you to Andrew Breslav and his team at Jetbrains for putting together a highly viable alternative to Java.
+These koans constitute:
+- a thank you to Paul Chiusano and Rúnar Bjarnason for putting together what's widely considered a seminal book on functional programming
+- a thank you to Andrew Breslav and his team at Jetbrains for putting together a highly viable alternative to Java
 
 I'd like to also thank Paul and Rúnar for originating possibly the single most popular functional programming meme that a colleague of mine once aptly expressed as an interview question:
 
