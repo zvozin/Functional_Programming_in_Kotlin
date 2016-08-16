@@ -58,4 +58,6 @@ I'd like to also thank Paul and Rúnar for originating possibly the single most 
 >
 > A: always - this ain't no amateur hour!
 
-Enjoy! Comments and improvements are welcome - simply submit an issue. 
+# Enjoy 
+
+Comments and improvements are welcome - just submit an issue. 
