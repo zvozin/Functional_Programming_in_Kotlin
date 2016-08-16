@@ -55,6 +55,7 @@ These koans constitute a thank you to Paul Chiusano and Rúnar Bjarnason for put
 I'd like to also thank Paul and Rúnar for originating possibly the single most popular functional programming meme that a colleague of mine once aptly expressed as an interview question:
 
 > Q: under what circumstances do you flatMap that sh*t?
+>
 > A: always - this ain't no amateur hour!
 
 Enjoy! Comments and improvements are welcome - simply submit an issue. 
