@@ -27,7 +27,7 @@ NOTE: The book builds functional programming concepts from first principles to m
 
 ## Pertinent differences between Scala and Kotlin
 
-Kotlin differs from Scala three ways: some things are missing, others are different, others are in Kotlin but no in Scala.
+Kotlin differs from Scala three ways: some things are missing, others are different, others are in Kotlin but not in Scala. A few differences I consider worth mentioning off the bat are below.
 
 #### Missing in Kotlin
 
@@ -38,7 +38,6 @@ Kotlin differs from Scala three ways: some things are missing, others are differ
 
 - `when` is not a Scala pattern-match. You can't implement `unapply()` for a type, and there are no variable assignments. It does its own neat tricks, though: automatically casts the match subject when matching on class, and doesn't require explicit source reference on the right side of such matches
 - only one lambda argument can be anonymous, and is referred to as `it` rather than `_`. In exchange, the `it` reference can be used in a lambda any number of times without confusion
-- generic syntax is Java/C#-style
 
 #### Missing in Scala
 - first-class [extension functions](https://kotlinlang.org/docs/reference/extensions.html) without having to resort to `implicit` type conversion, which both:
