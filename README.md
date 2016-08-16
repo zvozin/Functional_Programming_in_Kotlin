@@ -6,12 +6,11 @@ This is a repository of exercises from @pchuisano and @runorama's seminal book [
 
 Kotlin is the new heir apparent to Java, developed open-source style by [Jetbrains](https://www.jetbrains.com) (the IntelliJ guys.) Goodies include:
 - static typing with generics and proper variance
-- a neat lambda syntax
-- collections with syntactic sugars
+- neat lambda syntax
 - operator overloading w/infix syntax
-- a [first-class extension facility](https://kotlinlang.org/docs/reference/extensions.html)
+- [first-class extension facility](https://kotlinlang.org/docs/reference/extensions.html)
 - [sealed classes](https://kotlinlang.org/docs/reference/classes.html) to express ADTs
-- `when` statement that's half way between a switch and a pattern-match
+- `when` statement - half way between a `switch` and a pattern-match
 - language-level null-safety (as in Swift)
 - quick compiles
 - extensive tool support (because provenance)
