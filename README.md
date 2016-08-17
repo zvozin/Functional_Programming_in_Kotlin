@@ -53,7 +53,7 @@ Virtualy *everything* in these koans is implemented as extension functions.
 # Thanks
 
 These koans constitute:
-- a thank you to Paul Chiusano and Rúnar Bjarnason for putting together a seminal book on functional programming
+- a thank you to Paul Chiusano and Rúnar Bjarnason for writing a seminal book on functional programming
 - a thank you to Andrew Breslav and his team at Jetbrains for putting together a highly viable alternative to Java
 
 I'd also like to thank Paul and Rúnar for originating possibly the single most popular functional programming meme that a colleague of mine once aptly expressed as an interview question:
