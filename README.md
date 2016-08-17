@@ -32,8 +32,8 @@ Kotlin differs from Scala three ways: some things are missing, others are differ
 #### Not in Kotlin
 
 - `for` comprehension. You have to spell out the `flatMap`s
-- there's no `a: => A`-style syntactic sugar for non-strict arguments. You have to explicitly use `Lazy<A>`. This could be expressive enough to merit inclusion - I'll likely be submitting a KEEN process request
-- there's no `()` syntactic sugar for tuples. You have to explicitly use `Pair<A, B>` or `Triple<A, B, C>`
+- `a: => A`-style syntactic sugar for non-strict arguments. You have to explicitly use `Lazy<A>`. This could be expressive enough to merit inclusion - I'll likely be submitting a KEEN process request
+- `()` syntactic sugar for tuples. You have to explicitly use `Pair<A, B>` or `Triple<A, B, C>`
 
 #### Different between Kotlin and Scala
 
