@@ -38,13 +38,14 @@ Kotlin differs from Scala three ways: some things are missing, others are differ
 
 - `when` is not a Scala pattern-match. You can't implement `unapply()` for a type, and there are no variable assignments. It does its own neat tricks, though: automatically casts the match subject when matching on class, and doesn't require explicit source reference on the right side of such matches
 - only one lambda argument can be anonymous, and is referred to as `it` rather than `_`. In exchange, the `it` reference can be used in a lambda any number of times without confusion
+- `typealias`es are not available until [Kotlin 1.1](https://blog.jetbrains.com/kotlin/2016/07/first-glimpse-of-kotlin-1-1-coroutines-type-aliases-and-more)
 
 #### Missing in Scala
-- first-class [extension functions](https://kotlinlang.org/docs/reference/extensions.html) without having to resort to `implicit` type conversion, which both:
-    - allow fully type-safe extension (not type classes, though - you can't yet implement an interface like this)
-    - obviate the [tyranny of dominant decomposition](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.9.5189&rep=rep1&type=pdf), which the authors mention discussing `sequence`-ing of a `List` of `Option`s. 
+- first-class [extension functions](https://kotlinlang.org/docs/reference/extensions.html) without having to resort to `implicit` type conversion, which:
+    1. allow fully type-safe extension (not type classes, though - you can't yet implement an interface like this)
+    2. obviate the [tyranny of dominant decomposition](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.9.5189&rep=rep1&type=pdf), which the authors mention when discussing `sequence`-ing of a `List` of `Option`s. 
   
-Virtualy *everything* in these koans is implemented using extension functions.
+Virtualy *everything* in these koans is implemented as extension functions.
 
 # Thanks
 

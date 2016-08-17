@@ -6,6 +6,6 @@ package me.alexz.ch3_Functional_Data_Structures
 
 fun List<Int>.sum(): Int = this.foldLeft(0) { a: Int, s: Int -> a + s }
 
-fun List<Double>.product(): Double = this.foldLeft(0.0) { a: Double, s: Double -> a * s }
+fun List<Double>.product(): Double = this.foldLeft(0.0) { a, s -> a * s }
 
-fun <A> List<A>.lengthLeft(): Int = this.foldLeft(0) { a: A, s: Int -> s + 1 }
+fun <A> List<A>.lengthLeft(): Int = this.foldLeft(0) { a, s -> s + 1 }
