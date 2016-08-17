@@ -1,6 +1,6 @@
 # Functional Programming in Kotlin
 
-This is a repository of exercises from @pchuisano and @runorama's seminal book ["Function Programming in Scala"](https://www.manning.com/books/functional-programming-in-scala), implemented [koan-style](https://sinairv.wordpress.com/2012/05/27/programming-koans-one-of-the-best-ways-to-learn-a-new-language-or-framework) in [Kotlin](http://kotlinlang.org).
+This is a repository of exercises from @pchuisano and @runorama's seminal book ["Function Programming in Scala"](https://www.manning.com/books/functional-programming-in-scala), implemented [koan-style](https://sinairv.wordpress.com/2012/05/27/programming-koans-one-of-the-best-ways-to-learn-a-new-language-or-framework) in [Kotlin](http://kotlinlang.org). Exercices that can't have unit-testable results - i.e. "consider how you would" exercises - are skipped, as are exercises marked *Hard*.
 
 ## Why Kotlin
 
@@ -33,6 +33,7 @@ Kotlin differs from Scala three ways: some things are missing, others are differ
 
 - `for` comprehension. There's none. Spelling out all the `flatMap`s has the obvious up- and down-sides
 - there's no `a: => A`-style syntactic sugar for non-strict arguments. You have to explicitly use `Lazy<A>`
+- there's no `()` syntactic sugar for tuples. You have to explicitly use `Pair<A, B>` or `Triple<A, B, C>`
 
 #### Different between Kotlin and Scala
 
