@@ -4,7 +4,7 @@ This is a repository of exercises from @pchuisano and @runorama's seminal book [
 
 ## Why Kotlin
 
-Kotlin is the new heir apparent to Java, developed open-source style by [Jetbrains](https://www.jetbrains.com) (the IntelliJ guys.) Goodies include:
+Kotlin is the new heir apparent to Java, developed open-source style by [Jetbrains](https://www.jetbrains.com). Goodies include:
 - static typing with generics and proper variance
 - neat lambda syntax
 - operator overloading w/infix syntax
@@ -13,7 +13,7 @@ Kotlin is the new heir apparent to Java, developed open-source style by [Jetbrai
 - `when` statement - half way between a `switch` and a pattern-match
 - language-level null-safety (as in Swift)
 - quick compiles
-- extensive tool support (because provenance)
+- extensive tool support (because of provenance)
 
 Kotlin's been gaining steam among Android developers and Scala refugees. Take it for a spin:
 - if you don't have it yet, get [IntelliJ](https://www.jetbrains.com/idea)
