@@ -18,3 +18,5 @@ fun <A, B> map(s: (RNG) -> Pair<A, RNG>, f: (A) -> B): (RNG) -> Pair<B, RNG> = {
     val (a, rng2) = s(rng)
     Pair(f(a), rng2)
 }
+
+data class State<out A, S>(val run: (S) -> Pair<A, S>)

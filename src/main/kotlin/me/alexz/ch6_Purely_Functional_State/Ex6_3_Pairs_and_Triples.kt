@@ -20,7 +20,7 @@ fun doubleLong(rng: RNG): Pair<Pair<Double, Long>, RNG> {
 
 fun tripleDouble(rng: RNG): Pair<Triple<Double, Double, Double>, RNG> {
     val double1 = double(rng)
-    val double2 = double(rng)
-    val double3 = double(rng)
+    val double2 = double(double1.second)
+    val double3 = double(double2.second)
     return Pair(Triple(double1.first, double2.first, double3.first), double3.second)
 }

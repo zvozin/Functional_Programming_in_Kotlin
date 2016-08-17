@@ -10,8 +10,9 @@ fun <A, B> flatMap(f: (RNG) -> Pair<A, RNG>,
     g(pair.first)(pair.second)
 }
 
-fun nonNegativeLongLessThan(n: Long): (RNG) -> Pair<Long, RNG> = { rng ->
-    val (i, rng2) = nonNegativeLong(rng)
-    val mod = i % n
-    if (i + (n - 1) - mod >= 0) Pair(mod, rng2) else nonNegativeLongLessThan(n)(rng)
+fun nonNegativeLessThan(n: Long): (RNG) -> Pair<Long, RNG> = flatMap(::nonNegativeLong) { a: Long ->
+    { rng: RNG ->
+        val mod = a % n
+        if (a + (n - 1) - mod >= 0) Pair(mod, rng) else nonNegativeLessThan(n)(rng)
+    }
 }
