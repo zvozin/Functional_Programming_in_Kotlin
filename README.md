@@ -27,7 +27,7 @@ NOTE: The book builds functional programming concepts from first principles to m
 
 ## Pertinent differences between Scala and Kotlin
 
-Kotlin differs from Scala three ways: some things are missing, others are different, others are in Kotlin but not in Scala. A few differences I consider worth mentioning off the bat are below.
+Kotlin differs from Scala three ways: some things are missing, others are different, others are in Kotlin but not in Scala. Some of the differences should be mentioned off the bat.
 
 #### Not in Kotlin
 
